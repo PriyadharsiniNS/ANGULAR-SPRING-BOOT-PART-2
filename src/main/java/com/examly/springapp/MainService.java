@@ -49,9 +49,9 @@ public class MainService {
         return ir.save(i);
     }
 
-    public void deleteIns(int iid)
+    public void deleteIns(int instituteId)
     {
-        ir.deleteById(iid);
+        ir.deleteById(instituteId);
     }
 
     public List<Institutes> getAllIns()

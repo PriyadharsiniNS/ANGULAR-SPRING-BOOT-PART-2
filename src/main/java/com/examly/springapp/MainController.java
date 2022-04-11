@@ -42,25 +42,25 @@ public class MainController {
         return cs.getAll();
     }
     
-    @PostMapping("/addinstitutes")
+    @PostMapping("/addInstitute")
     public void addInstitutes(@RequestBody Institutes i)
     {
         cs.addIns(i);
     }
 
-    @PutMapping("/editinstitutes")
+    @PutMapping("/editInstitute")
     public Institutes editInstitutes(@RequestBody Institutes i)
     {
         return cs.editIns(i);
     }
 
-    @DeleteMapping("/deleteinstitutes/{iid}")
-    public void deleteInstitutes(@PathVariable int iid)
+    @DeleteMapping("/deleteinstitutes/{instituteId}")
+    public void deleteInstitutes(@PathVariable int instituteId)
     {
-        cs.deleteIns(iid);
+        cs.deleteIns(instituteId);
     }
 
-    @GetMapping("/viewallinstitutes")
+    @GetMapping("/viewInstitutes")
     public List<Institutes> getAllInstitutes()
     {
         return cs.getAllIns();
